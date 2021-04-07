@@ -1,46 +1,78 @@
 Task 1
 
-MODULE 1
-// Import the data into a data structure that you will create
+    MODULE 1
+    // Import the data into a data structure that you will create
 
-import the file
+    import the file
 
-create patient class
-for each row in the csv file:
-    create a patient object
-    setting the appropriate attributes
-    data stored!
-
-
-MODULE 2
-// Calculate the BMI for each patient and classify these patients as 
-// underweight, normal, overweight, or obese
-// Update the data structure adding the BMI
-
-for each patient:
-    do *calculate_bmi* // BMI = weight (kgs) / height**2 (m)
-    save BMI attribute for patient
-
-MODULE 3
-// Print the patient name, age, BMI, and weight classification etc
-// Show obese, then underweight, then overweight, then normal.
-// Break every 10 ((if iterable is multiple of 10 add line break!))
-
-for each patient: // This could be the same loop that calculates BMI (time?)
-    { // Either:
-    create display method(s) for the patient class and call it in main
-    // OR:
-    print the apt attributes in the main by calling them by name
-    }
-    if our iterable is multiple of 10 (modulo), insert line break
+    create patient class
+    for each row in the csv file:
+        create a patient object
+        setting the appropriate attributes
+        data stored!
 
 
-MODULE 4
-// Print the worst 5 underweight and worst 5 obese patients in two 
-// groupings, male and female
+    MODULE 2
+    // Calculate the BMI for each patient and classify these patients as 
+    // underweight, normal, overweight, or obese
+    // Update the data structure adding the BMI
 
-create datasets of all underweight and obese patients respectively
-divide these datasets by sex
-sort these 4 datasets
-print the most underweight males and females
-print the most obesee males and females
+    for each patient:
+        do *calculate_bmi* // BMI = weight (kgs) / height**2 (m)
+        save BMI attribute for patient
+
+    MODULE 3
+    // Print the patient name, age, BMI, and weight classification etc
+    // Show obese, then underweight, then overweight, then normal.
+    // Break every 10 ((if iterable is multiple of 10 add line break!))
+
+    for each patient: // This could be the same loop that calculates BMI (time?)
+        { // Either:
+        create display method(s) for the patient class and call it in main
+        // OR:
+        print the apt attributes in the main by calling them by name
+        }
+        if our iterable is multiple of 10 (modulo), insert line break
+
+
+    MODULE 4
+    // Print the worst 5 underweight and worst 5 obese patients in two 
+    // groupings, male and female
+
+    create datasets of all underweight and obese patients respectively
+    divide these datasets by sex
+    sort these 4 datasets
+    print the most underweight males and females
+    print the most obesee males and females
+
+You should find out 5 underweight and 5 obese first, and for the ten, you display them by two groups, male and female.
+-Kun
+
+Task 2
+
+    1.Establish which patients need to be referred to a dietitian.
+    2.Rank the order of priority according to the rules given above.
+    3.Display / Print on Screen patient names of those that need to be referred to a dietitian.
+    Insert breaks every 10 patients to allow the user of the system to study the results.
+
+    MODULE 1 DONE
+
+    // Priority levels could be string or int e.g. 1,2,3 or low, medium, high
+
+
+    // Function determinePriority
+    if statements according to the spec
+    e.g. if patient is asthmatic AND is over 55: priority attribute set to high or 3 or something
+
+
+    MODULE 2
+
+    Display / Print on Screen patient names of those that need to be referred to a dietitian.
+    Insert breaks every 10 patients to allow the user of the system to study the results.
+    Rank the order of priority according to the rules given above
+
+    
+    Two lists!
+    topPriorityList: sorted with oldest displayed first
+    referralList: sorted with oldest displayed first]
+

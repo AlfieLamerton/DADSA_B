@@ -1,117 +1,139 @@
-// This all comes under module1 fuck me
+Task 1
 
-import csv and do any other imports
+    // This all comes under module1 fuck me
 
-initialise patientList
+    import csv and do any other imports
 
-class Patient:
-    init(self):
-        self.name
-        self.DOB
-        self.height
-        self.weight
-        self.smokes
-        self.asthmatic
-        self.ntjNtr
-        self.hypertension
-        self.renalRT
-        self.ileostomyColostomy
-        self.parenteral
-        self.nutrition // No data
-    
-    *OR*
+    initialise patientList
 
-    init(self, name, DOB, height, weight, smokes, asthmatic, ntjNtr, hypertension, renalRT, ileostomyColostomy, parenteral, nutrition):
-        *set each to self.^*
-
-    def calculateBMI: // Module 2
-        return self.weight / (self.height^^2)
-    
-    def classifySlimPatientByWeight:
-        if (calculateBMI() < 18.5):
-            return underweight
-
-        elif (calculateBMI() >= 18.5 OR <= 25):
-            return normal
+    class Patient:
+        init(self):
+            self.name
+            self.DOB
+            self.height
+            self.weight
+            self.smokes
+            self.asthmatic
+            self.ntjNtr
+            self.hypertension
+            self.renalRT
+            self.ileostomyColostomy
+            self.parenteral
+            self.nutrition // No data
         
-        elif (calculateBMI() > 25 OR <= 28):
-            return overweight
+        *OR*
 
-        elif (calculateBMI() > 28):
-            return obese
+        init(self, name, DOB, height, weight, smokes, asthmatic, ntjNtr, hypertension, renalRT, ileostomyColostomy, parenteral, nutrition):
+            *set each to self.^*
 
-    def classifyRegularPatientByWeight:
-        if (calculateBMI() < 18.5):
-            return underweight
-
-        elif (calculateBMI() >= 18.5 OR <= 25):
-            return normal
+        def calculateBMI: // Module 2
+            return self.weight / (self.height^^2)
         
-        elif (calculateBMI() > 25 OR <= 29):
-            return overweight
+        def classifySlimPatientByWeight:
+            if (calculateBMI() < 18.5):
+                return underweight
 
-        elif (calculateBMI() > 29):
-            return obese
-    
-    def classifyAthleticPatientByWeight:
-        if (calculateBMI() < 18.5):
-            return underweight
+            elif (calculateBMI() >= 18.5 OR <= 25):
+                return normal
+            
+            elif (calculateBMI() > 25 OR <= 28):
+                return overweight
 
-        elif (calculateBMI() >= 18.5 OR <= 25):
-            return normal
+            elif (calculateBMI() > 28):
+                return obese
+
+        def classifyRegularPatientByWeight:
+            if (calculateBMI() < 18.5):
+                return underweight
+
+            elif (calculateBMI() >= 18.5 OR <= 25):
+                return normal
+            
+            elif (calculateBMI() > 25 OR <= 29):
+                return overweight
+
+            elif (calculateBMI() > 29):
+                return obese
         
-        elif (calculateBMI() > 25 OR <= 30):
-            return overweight
+        def classifyAthleticPatientByWeight:
+            if (calculateBMI() < 18.5):
+                return underweight
 
-        elif (calculateBMI() > 30):
-            return obese
+            elif (calculateBMI() >= 18.5 OR <= 25):
+                return normal
+            
+            elif (calculateBMI() > 25 OR <= 30):
+                return overweight
+
+            elif (calculateBMI() > 30):
+                return obese
+            
+
+
+    function readCSVFileCreatePatients(the file):
+        open file:
+            open reader
+            reader skip first line
+
+            for rowX in reader:
+                assign each attribute in Patient object according to cells
+
+
+    for each patient (iterable i)
+        print (that patient's name, age, BMI, and weight classification)
+
+
+
+    setters dont think I need them
+
+    def setName(self, name):
+            self.name = name
         
+        def setDateOfBirth(self, dateOfBirth):
+            self.DateOfBirth = dateOfBirth
+
+        def setHeight(self, height):
+            self.height = height
+        
+        def setWeight(self, weight):
+            self.weight = weight
+        
+        def setSmokes(self, smokes):
+            self.smokes = smokes
+        
+        def setAsthmatic(self, asthmatic):
+            self.asthmatic = asthmatic
+
+        def setNtjNtr(self, ntjNtr):
+            self.ntjNtr = ntjNtr
+        
+        def setHypertension(self, hyperTension):
+            self.hyperTension = hyperTension
+        
+        def setRenalRT(self, renalRT):
+            self.renalRT = renalRT
+        
+        def setIleostomyColostomy(self, ileostomyColostomy):
+            self.ileostomyColostomy = ileostomyColostomy
+        
+        def setParenteral
+
+Task 2
+
+    Two ways to approach this: 
+    change patient.referOrNot field and keep patients lumped together
+    Or
+    for any patient that needs referring, add them to a new array
+    Faster??
+
+    MODULE 1: work out which patients need to be referred
+
+    def referOrNot(patient):
+        if (patient weightclass = obese OR underweight): patient.needsReferring = True
+        if (patient hypertension = true): patient.needsReferring = True
+        if (patient asthmatic or smoker)
 
 
-function readCSVFileCreatePatients(the file):
-    open file:
-        open reader
-        reader skip first line
 
-        for rowX in reader:
-            assign each attribute in Patient object according to cells
-
-
-for each patient (iterable i)
-    print (that patient's name, age, BMI, and weight classification)
-
-
-
-setters dont think I need them
-
-def setName(self, name):
-        self.name = name
-    
-    def setDateOfBirth(self, dateOfBirth):
-        self.DateOfBirth = dateOfBirth
-
-    def setHeight(self, height):
-        self.height = height
-    
-    def setWeight(self, weight):
-        self.weight = weight
-    
-    def setSmokes(self, smokes):
-        self.smokes = smokes
-    
-    def setAsthmatic(self, asthmatic):
-        self.asthmatic = asthmatic
-
-    def setNtjNtr(self, ntjNtr):
-        self.ntjNtr = ntjNtr
-    
-    def setHypertension(self, hyperTension):
-        self.hyperTension = hyperTension
-    
-    def setRenalRT(self, renalRT):
-        self.renalRT = renalRT
-    
-    def setIleostomyColostomy(self, ileostomyColostomy):
-        self.ileostomyColostomy = ileostomyColostomy
-    
-    def setParenteral
+    def calculatePriority(patient):
+        if 
